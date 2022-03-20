@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <script type='text/javascript' src="/static/script.js" defer ></script>
+        <link type="text/css" rel="stylesheet" href="/static/styles.css">
+        <script src="https://code.highcharts.com/stock/highstock.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/data.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/stock/modules/export-data.js"></script>
+
+
+        
+
+    </head>
+
+    <body>
+
+        <div class='top'>
+            Stock Search
+        </div>
+
+
+        <!-- <p id='paragraph1'>hey</p> -->
+        <!-- <form > -->
+
+        <div class='form-div'>
+            <form class="ticker-form" id='stockform' action="">
+                <input class="input-button" type="submit" value="" id="submit-button"/>
+                <input type="text" name="ticker" id="ticker" placeholder="Enter Stock Ticker Symbol" required/>
+                <input class="input-button" type="reset" value="" id="clear-button"/>
+            </form>
+
+        </div>
+            
+
+        <!-- </form> -->
+
+        <div id='tabs' style='display:none;'>
+            
+            <div class="tab-buttons">
+                <button class="tab-button active" id='Company-button' onclick="enable('Company-button', 'Company')">Company</button>
+                <button class="tab-button" id='Summary-button' onclick="enable('Summary-button', 'Summary')">Stock Summary</button>
+                <button class="tab-button" id='Charts-button' onclick="enable('Charts-button', 'Charts')">Charts</button>
+                <button class="tab-button" id='News-button' onclick="enable('News-button', 'News')">Latest News</button>
+            </div>        
+
+
+            <div class='tab active-tab' id='Company'>
+                
+            </div>
+            <div class='tab' id='Summary'>
+                
+            </div>
+            <div class='tab' id='Charts'>
+            
+            </div>
+            <div class='tab' id='News'>
+        
+            </div>
+        </div>
+
+        <div id='error-div' >
+            Error: no record has been found, please enter a valid symbol
+        </div>
+        
+    </body>
+</html>
